@@ -1,0 +1,182 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-04-04 20:29:36.475342",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "request__title",
+  "requester",
+  "department",
+  "request_details",
+  "attachment",
+  "current_state",
+  "reviewer_comments",
+  "status",
+  "approval_status",
+  "approve",
+  "reject",
+  "request_more_info",
+  "bypass_approval"
+ ],
+ "fields": [
+  {
+   "fieldname": "request__title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Request  Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "requester",
+   "fieldtype": "Link",
+   "label": "Requester",
+   "options": "User",
+   "reqd": 1
+  },
+  {
+   "fieldname": "department",
+   "fieldtype": "Link",
+   "label": "Department",
+   "options": "Department",
+   "reqd": 1
+  },
+  {
+   "fieldname": "request_details",
+   "fieldtype": "Small Text",
+   "label": "Request Details",
+   "reqd": 1
+  },
+  {
+   "fieldname": "attachment",
+   "fieldtype": "Attach",
+   "label": "Attachment"
+  },
+  {
+   "fieldname": "current_state",
+   "fieldtype": "Select",
+   "label": "Current State",
+   "options": "Raised\nRequested Review 1 (Auditor)\nRequested Review 2 (Project Manager)\nPending\nApproved\nRejected",
+   "reqd": 1
+  },
+  {
+   "fieldname": "reviewer_comments",
+   "fieldtype": "Text Editor",
+   "label": "Reviewer Comments"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nRejected",
+   "reqd": 1
+  },
+  {
+   "default": "Pending",
+   "fieldname": "approval_status",
+   "fieldtype": "Select",
+   "label": "Approval Status",
+   "options": "Pending\nApproved\nRejected\nMore Info Needed"
+  },
+  {
+   "fieldname": "approve",
+   "fieldtype": "Button",
+   "label": "Approve"
+  },
+  {
+   "fieldname": "reject",
+   "fieldtype": "Button",
+   "label": "Reject"
+  },
+  {
+   "fieldname": "request_more_info",
+   "fieldtype": "Button",
+   "label": "Request More Info"
+  },
+  {
+   "fieldname": "bypass_approval",
+   "fieldtype": "Button",
+   "label": "Bypass Approval"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-04-05 02:58:28.767627",
+ "modified_by": "Administrator",
+ "module": "my_custom_app",
+ "name": "Leave Request",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "role": "Requester",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Auditor",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Special User",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
